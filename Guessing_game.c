@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main() {
     printf("----------------------------------- \n");
     printf("welcome to the guessing game \n");
     printf("----------------------------------- \n");
 
-    int secret_number = 47;
+    int sec = time(0);
+    srand(sec);
+    int big_number = rand();
+
+    int secret_number = big_number % 100;
 
     int attempts = 0;
     int kick;
